@@ -1,0 +1,130 @@
+:root {
+  --base: #eff1f5;
+  --text: #4c4f69;
+  --subtext: #6c6f85;
+  --overlay: #9ca0b0;
+  --red: #d20f39;
+  --peach: #fe640b;
+  --yellow: #df8e1d;
+  --green: #40a02b;
+  --sky: #04a5e5;
+  --blue: #1e66f5;
+  --lavender: #7287fd;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-color: var(--base);
+  padding: 1rem;
+}
+
+.container {
+  width: clamp(0rem, 100%, 48rem);
+  margin-inline: auto;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--subtext);
+  margin-bottom: 0.5rem;
+}
+
+:where(.title):has(+.subtitle) {
+  margin-bottom: 0;
+}
+
+hr {
+  border-bottom: 0.25rem solid var(--subtext);
+  margin-block: 2rem;
+}
+
+.form-control {
+  display: flex;
+  border: 1px solid var(--overlay);
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+label {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.form-control input {
+  padding: .5rem .6rem;
+  border: none;
+  font-family: inherit;
+  flex-grow: 1;
+}
+
+.form-control button {
+  padding: .5rem .6rem;
+  border: none;
+  font-family: inherit;
+  border-left: 1px solid var(--overlay);
+}
+
+.error {
+  color: var(--red);
+}
+
+.todo-list {
+  list-style-type: none;
+  border: 1px solid var(--subtext);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.todo-item {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 600;
+}
+
+/* .todo-item[data-complete="true"] {
+  color: var(--base);
+} */
+
+.todo-item[data-complete="true"] .todo-wrapper {
+  text-decoration: line-through;
+  opacity: .5;
+}
+
+.todo-item .todo-wrapper {
+  flex-grow: 1;
+}
+
+.todo-item button {
+  padding: .25rem;
+}
+
+.todo-item:not(:last-child) {
+  border-bottom: 1px solid var(--subtext);
+}

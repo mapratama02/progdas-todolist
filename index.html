@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>todo-list</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h1 class="title">Todo List</h1>
+      <p class="subtitle">Tampung kegiatan yang ingin kamu lakukan</p>
+      <hr>
+
+      <form action="" id="todoForm">
+        <label for="todoInput">Masukkan Todo</label>
+        <div class="form-control">
+          <input type="text" id="todoInput" name="todoInput">
+          <button id="todoButton" type="submit">Submit</button>
+        </div>
+        <p class="error"><small id="errorMsg" style="display: none;">Error</small></p>
+      </form>
+
+      <ul class="todo-list" id="todos">
+        <li class="todo-item">
+          <div class="todo-wrapper">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae necessitatibus voluptas alias quam
+              corporis fugiat porro atque, distinctio labore ipsum culpa voluptatibus esse dolor rerum, temporibus eum.
+              Doloremque, dicta deleniti?</p>
+          </div>
+          <button class="complete">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="delete">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </li>
+        <li class="todo-item">
+          <div class="todo-wrapper">
+            <p>List 2</p>
+          </div>
+          <button class="complete">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="delete">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </li>
+        <li class="todo-item">
+          <div class="todo-wrapper">
+            <p>List 3</p>
+          </div>
+          <button class="complete">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="delete">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </li>
+        <li class="todo-item">
+          <div class="todo-wrapper">
+            <p>List 4</p>
+          </div>
+          <button class="complete">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="delete">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </li>
+        <li class="todo-item">
+          <div class="todo-wrapper">
+            <p>List 5</p>
+          </div>
+          <button class="complete">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="delete">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
